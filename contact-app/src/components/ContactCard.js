@@ -9,7 +9,8 @@ const CardContact = (props) => {
     <div className="item">
       <img className="ui avatar image" src={user} alt="user" />
       <div className="content">
-        <Link to={`/contact/${id}`}>
+        {/* passagem de dados para o componente detalhe do contato */}
+        <Link to={{pathname:`/contact/${id}`, state:{contact: props.contact}}}>
           <div className="header">{name}</div>
           <div>{email}</div>
         </Link>
