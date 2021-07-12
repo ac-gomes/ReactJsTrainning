@@ -7,6 +7,7 @@ import Header from "./Header";
 import AddContact from "./AddContact";
 import ContactList from "./ContactList";
 import ContactDetail from "./ContactDetail";
+import EditContact from "./EditContact";
 
 function App() {
   //const LOCAL_STORAGE_KEY = "contacts";
@@ -29,7 +30,17 @@ function App() {
     setContacts([...contacts, response.data]);
   };
 
-  const removContactHandler = (id) => {
+  const updateContactHandler = async (contact) => {
+    const response = await api.put(`/contacts/${contact.id}`, contact)
+    const {id, name, email} = response.data
+    setContacts(
+      contacts.map(contact => {
+      return contact.id === id ? {...response.data} : contact;
+    }));
+  };
+
+  const removContactHandler = async (id) => {
+    await api.delete(`/contacts/${id}`);
     const newContactList = contacts.filter((contact) => {
       return contact.id !== id;
     });
@@ -74,7 +85,14 @@ function App() {
              <AddContact {...props} addContactHandler={addContactHandler} />
           )}
         />
-
+        <Route
+          path="/edit"
+          render={(props) => (
+             <EditContact
+              {...props}
+              updateContactHandler={updateContactHandler} />
+          )}
+        />
         <Route path="/contact/:id" component={ContactDetail} />
         </Switch>
       </Router>

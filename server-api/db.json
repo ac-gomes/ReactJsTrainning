@@ -1,0 +1,24 @@
+{
+  "contacts": [
+    {
+      "id": "9b4615c9-fc80-4117-8343-7b698a25ef98",
+      "name": "Jhow",
+      "email": "Jhow@gmail.com"
+    },
+    {
+      "id": "fa979730-6027-4b45-be29-fce9e9e50790",
+      "name": "Toni",
+      "email": "toni@gmail.com"
+    },
+    {
+      "id": "527a99b5-f791-4c7f-9aac-3387982da29a",
+      "name": "Odair Silva",
+      "email": "odair@gmail.com"
+    },
+    {
+      "id": "34f0bffa-d4ed-4d47-8342-da31a40ce2db",
+      "name": "Malandro",
+      "email": "malandragem@gmail.com"
+    }
+  ]
+}
