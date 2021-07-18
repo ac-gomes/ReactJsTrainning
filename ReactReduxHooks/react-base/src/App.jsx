@@ -13,6 +13,7 @@ import Pai from './components/communication/direct/Pai';
 import Super from './components/communication/indirect/Super';
 import Input from './components/form/Input';
 import Contador from './components/contador/Contador';
+import Mega from './components/mega/Mega';
 
 
 const App = (props) => (
@@ -20,6 +21,9 @@ const App = (props) => (
     <Header titulo="Fundamentos React"/>
 
     <div className="Cards">
+      <Card titulo=" #11 - Mega-Sena" color="#6E2C00">
+        <Mega qtdNumero={8}></Mega>
+      </Card>
       <Card titulo=" #10 - Contador (Class Component)" color="#293e6a">
         <Contador passo={10} valor={100}></Contador>
       </Card>
