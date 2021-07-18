@@ -1,0 +1,17 @@
+body {
+  font-family:sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+  background-color: #444 ;
+  color: #ffff;
+  text-align: center;
+
+  background: #485563;
+  background: -webkit-linear-gradient(to right, #29323c, #485563);
+  background: linear-gradient(to right, #29323c, #485563);
+
+}
+
+h1, h2 {
+  font-weight: 300;
+}
